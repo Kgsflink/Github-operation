@@ -1,0 +1,297 @@
+
+---
+
+## 🔹 What is Git & GitHub (Basic Idea)
+
+* **Git** → Version control system (local machine par kaam karta hai)
+* **GitHub** → Online platform (cloud) jahan Git repositories store hoti hain
+
+👉 Git = tool
+👉 GitHub = service
+
+---
+
+## 🔹 Why Git is Important for Bachelors 🎓
+
+* Projects manage karna
+* Group project collaboration
+* Internship & placement me **must-have skill**
+* Resume boost 🚀
+
+---
+
+## 🔹 Git vs GitHub (Difference)
+
+| Git                   | GitHub          |
+| --------------------- | --------------- |
+| Local system par kaam | Online platform |
+| Version control       | Code hosting    |
+| Free & open source    | Free + paid     |
+| Command line based    | Web + Git       |
+
+---
+
+## 🔹 Installation & Setup (Windows)
+
+![Image](https://gitforwindows.org/img/gw1.png)
+
+![Image](https://res.cloudinary.com/wtkw/image/upload/v1635868104/waltertengcom/garden/how-to-add-git-bash-to-windows-terminal/cover_b4wwu0.png)
+
+![Image](https://i.sstatic.net/oI7sr.png)
+
+### Step 1: Download Git
+
+👉 [https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+### Step 2: Verify Installation
+
+```bash
+git --version
+```
+
+---
+
+## 🔹 First Time Git Configuration
+
+```bash
+git config --global user.name "Aditya"
+git config --global user.email "yourmail@gmail.com"
+```
+
+Check config:
+
+```bash
+git config --list
+```
+
+---
+
+## 🔹 Create First Repository (Local)
+
+```bash
+mkdir myproject
+cd myproject
+git init
+```
+
+📌 `.git` folder ban jaayega → repository ready
+
+---
+
+## 🔹 Git Basic Workflow
+
+![Image](https://media2.dev.to/dynamic/image/width%3D800%2Cheight%3D%2Cfit%3Dscale-down%2Cgravity%3Dauto%2Cformat%3Dauto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvpxeexqyfvf4hw3zxtbn.png)
+
+![Image](https://earthdatascience.org/images/earth-analytics/git-version-control/git-add-commit.png)
+
+1️⃣ Working Directory
+2️⃣ Staging Area
+3️⃣ Repository
+
+---
+
+## 🔹 Important Git Commands (Must for Exam)
+
+### Check Status
+
+```bash
+git status
+```
+
+### Add Files
+
+```bash
+git add file.txt
+git add .
+```
+
+### Commit Changes
+
+```bash
+git commit -m "first commit"
+```
+
+### View History
+
+```bash
+git log
+```
+
+---
+
+## 🔹 GitHub Repository Create
+
+![Image](https://docs.github.com/assets/cb-29762/images/help/repository/repo-create-global-nav-update.png)
+
+![Image](https://earthdatascience.org/images/earth-analytics/git-version-control/github-repo-interface.png)
+
+1. GitHub login
+2. New Repository
+3. Copy repository URL
+
+---
+
+## 🔹 Push Code to GitHub (First Time)
+
+```bash
+git remote add origin https://github.com/username/repo.git
+git branch -M main
+git push -u origin main
+```
+
+---
+
+## 🔹 Pull & Clone Operations
+
+### Clone Repository
+
+```bash
+git clone https://github.com/username/repo.git
+```
+
+### Pull Latest Code
+
+```bash
+git pull origin main
+```
+
+---
+
+## 🔹 Branching (Very Important)
+
+![Image](https://user-images.githubusercontent.com/1256329/80170009-f9d03200-85b4-11ea-94d3-3041887565ac.png)
+
+![Image](https://nvie.com/img/git-model%402x.png)
+
+### Create Branch
+
+```bash
+git branch dev
+```
+
+### Switch Branch
+
+```bash
+git checkout dev
+```
+
+### Create + Switch
+
+```bash
+git checkout -b feature1
+```
+
+### Merge Branch
+
+```bash
+git checkout main
+git merge dev
+```
+
+---
+
+## 🔹 Push Without Password (MOST IMPORTANT 🔥)
+
+GitHub ne **password authentication band kar diya** hai.
+Do options hain:
+
+---
+
+## ✅ METHOD 1: SSH Key (BEST & RECOMMENDED)
+
+![Image](https://jdblischak.github.io/2014-09-18-chicago/novice/git/img/github-add-ssh-key.png)
+
+![Image](https://jdblischak.github.io/2014-09-18-chicago/novice/git/img/github-ssh-keys.png)
+
+### Step 1: Generate SSH Key
+
+```bash
+ssh-keygen -t ed25519 -C "yourmail@gmail.com"
+```
+
+Press **Enter → Enter → Enter**
+
+### Step 2: Copy SSH Key
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+### Step 3: GitHub → Settings → SSH Keys → New Key
+
+Paste key ✔️
+
+### Step 4: Use SSH URL
+
+```bash
+git remote set-url origin git@github.com:username/repo.git
+```
+
+### Test
+
+```bash
+ssh -T git@github.com
+```
+
+🎉 Now **NO PASSWORD REQUIRED**
+
+---
+
+## ✅ METHOD 2: GitHub Token (Alternative)
+
+1. GitHub → Settings → Developer Settings
+2. Personal Access Token
+3. Copy token
+4. When password asks → **paste token**
+
+📌 Token = password replacement
+
+---
+
+## 🔹 Undo / Reset Commands
+
+```bash
+git reset file.txt
+git reset --hard HEAD
+git checkout -- file.txt
+```
+
+---
+
+## 🔹 Common Errors & Fix
+
+❌ `fatal: not a git repository`
+✔️ Run inside project folder
+
+❌ `authentication failed`
+✔️ Use SSH or Token
+
+---
+
+## 🔹 Git Commands Quick Sheet (Exam Ready)
+
+```bash
+git init
+git status
+git add .
+git commit -m "msg"
+git push
+git pull
+git clone
+git branch
+git checkout
+git merge
+```
+
+---
+
+## 🔹 Mini Practical (For Viva)
+
+1. Create repo
+2. Add file
+3. Commit
+4. Push to GitHub
+5. Create branch
+6. Merge branch
+
+---
