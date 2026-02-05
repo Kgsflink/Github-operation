@@ -298,12 +298,6 @@ Git bolta hai:
 ---
 
 ## <span style="color:red"><b>PART 1: PUSHING YOUR OWN PROJECT TO YOUR GITHUB ACCOUNT</b></span>
-<span style="color:red"><b>PART 1: PUSHING YOUR OWN PROJECT TO YOUR GITHUB ACCOUNT</b></span>
-
-## <span style="color:red"><strong>PART 1: PUSHING YOUR OWN PROJECT TO YOUR GITHUB ACCOUNT</strong></span>
-## <span style="color:red"><b>PART 1: PUSHING YOUR OWN PROJECT TO YOUR GITHUB ACCOUNT</b></span>
-### <span style="color:red"><b>PART 1: PUSHING YOUR OWN PROJECT TO YOUR GITHUB ACCOUNT</b></span>
-
 
 ### **Scenario: You have a project on your computer and want to put it on GitHub**
 
