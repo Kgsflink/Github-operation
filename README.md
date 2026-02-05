@@ -2,6 +2,25 @@
 
 ---
 
+## 1️⃣ Introduction to Version Control System (VCS)
+
+### What is Version Control?
+
+Version Control System ek aisa system hota hai jo:
+
+* Files ke **changes ka record** rakhta hai
+* Pehle ke version par **wapas jane** deta hai
+* Multiple logon ko **same project par kaam** karne deta hai
+
+### Types of VCS
+
+1. **Local VCS** – single computer
+2. **Centralized VCS** – ek central server (SVN)
+3. **Distributed VCS** – har user ke paas full copy (Git)
+
+👉 **Git = Distributed Version Control System**
+
+---
 ## **Part 1: Understanding the Basics**
 
 ### **1.1 What is Git?**
