@@ -80,6 +80,215 @@ git config --global init.defaultBranch main
 # Check configuration
 git config --list
 ```
+[![Logo](https://github.com/Kgsflink/Github-operation/blob/main/resources/config.png)]
+
+# 🔹 `git config` kya hota hai? (Bilkul basic)
+
+Git config ka matlab hota hai **Git ki settings**.
+
+👉 Jaise:
+
+* Mobile me settings hoti hain
+* Waise hi Git ki bhi settings hoti hain
+
+Command:
+
+```bash
+git config --list
+```
+
+📌 Ye command Git ko bolti hai:
+
+> “Mujhe apni saari settings dikha do”
+
+---
+
+## 🔹 Tumhare Output ko Line-by-Line Samjhte Hain
+
+---
+
+### 1️⃣ `diff.astextplain.textconv=astextplain`
+
+👉 Ye **file comparison (diff)** se related hai.
+
+* Jab Git do files compare karta hai
+* To ye setting text ko readable banati hai
+
+📌 **Beginner ke liye:**
+❌ Isko change karne ki zarurat nahi
+✔️ Ignore kar sakte ho
+
+---
+
+### 2️⃣ Git LFS (Large File Storage)
+
+```
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+```
+
+👉 Ye settings **badi files (videos, zip, images)** ke liye hoti hain
+
+📌 Matlab:
+
+* Git LFS large files ko alag system me store karta hai
+* Repo heavy nahi hota
+
+🎓 **College level:**
+Bas itna yaad rakho →
+
+> Git LFS = large files manage karne ka tool
+
+---
+
+### 3️⃣ `http.sslbackend=schannel`
+
+👉 Git jab **HTTPS** se GitHub se connect karta hai
+
+* To ye Windows ka **security system** use karta hai
+
+📌 Simple words:
+
+> Git secure connection bana raha hai
+
+✔️ Normal hai
+
+---
+
+### 4️⃣ `core.autocrlf=true`
+
+👉 Ye **line ending** ka rule hai
+
+📌 Matlab:
+
+* Windows → CRLF
+* Linux/Mac → LF
+* Git automatically adjust karta hai
+
+🎓 Exam line:
+
+> `core.autocrlf=true` helps in cross-platform compatibility
+
+---
+
+### 5️⃣ `core.fscache=true`
+
+👉 Git files ko **cache** karta hai
+
+* Performance fast hoti hai
+
+📌 Simple:
+
+> Git fast kaam kare
+
+---
+
+### 6️⃣ `core.symlinks=false`
+
+👉 Symbolic links Windows me properly support nahi hote
+
+📌 Isliye:
+
+> Git bol raha hai → symbolic links use mat karo
+
+✔️ Default & safe
+
+---
+
+### 7️⃣ `pull.rebase=false`
+
+👉 Jab tum `git pull` karte ho
+
+* To **merge** method use hota hai
+* Rebase nahi
+
+📌 Simple:
+
+```bash
+git pull = fetch + merge
+```
+
+🎓 Exam:
+
+> `pull.rebase=false` means merge strategy is used
+
+---
+
+### 8️⃣ `credential.helper=manager`
+
+👉 Ye **sabse important setting** hai 🔥
+
+📌 Matlab:
+
+* Git tumhara **username/password ya token** yaad rakhta hai
+* Har baar poochta nahi
+
+🎓 Simple words:
+
+> Login auto save ho jata hai
+
+---
+
+### 9️⃣ `credential.https://dev.azure.com.usehttppath=true`
+
+👉 Ye Azure DevOps ke liye specific setting hai
+
+📌 Agar Azure use nahi kar rahe → ignore
+
+---
+
+### 🔟 `init.defaultbranch=master`
+
+👉 Jab bhi tum:
+
+```bash
+git init
+```
+
+karte ho,
+
+* Default branch ka naam **master** hota hai
+
+📌 Aaj-kal GitHub me `main` zyada use hota hai
+
+Agar change karna ho:
+
+```bash
+git config --global init.defaultBranch main
+```
+
+---
+
+### 1️⃣1️⃣ `user.name=Deepak`
+
+👉 Ye **tumhara Git username** hai
+
+📌 Jab bhi commit hota hai:
+
+```bash
+git commit -m "message"
+```
+
+Git bolta hai:
+
+> Ye commit **Deepak** ne kiya
+
+---
+
+### 1️⃣2️⃣ `user.email=workwith.deepakprj@gmail.com`
+
+👉 Ye **sabse important** hai 🔥
+
+📌 GitHub isi email se:
+
+* Commit ko tumhare account se link karta hai
+* Green contribution graph banata hai
+
+✔️ Ye email GitHub account wali honi chahiye
+
+---
 
 ### **2.3 Create GitHub Account**
 1. Go to: https://github.com/
