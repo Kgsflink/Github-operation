@@ -50,6 +50,12 @@ Version Control System ek aisa system hota hai jo:
 **Windows/Mac/Linux:**
 1. Download from: https://git-scm.com/
    [![Logo](https://github.com/Kgsflink/Github-operation/blob/main/resources/Screenshot%202026-02-05%20080934.png)]
+   ### For window powershell 
+   ```bash
+winget install --id Git.Git -e --source winget
+sudo apt install git .
+
+
 3. Run installer with default options
 4. Verify installation:
 ```bash
