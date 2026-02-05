@@ -49,8 +49,9 @@ Version Control System ek aisa system hota hai jo:
 ### **2.1 Install Git**
 **Windows/Mac/Linux:**
 1. Download from: https://git-scm.com/
-2. Run installer with default options
-3. Verify installation:
+   [![Logo](https://github.com/Kgsflink/Github-operation/blob/main/resources/Screenshot%202026-02-05%20080934.png)]
+3. Run installer with default options
+4. Verify installation:
 ```bash
 git --version
 ```
