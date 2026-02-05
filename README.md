@@ -49,18 +49,24 @@ Version Control System ek aisa system hota hai jo:
 ### **2.1 Install Git**
 **Windows/Mac/Linux:**
 1. Download from: https://git-scm.com/
-   [![Logo](https://github.com/Kgsflink/Github-operation/blob/main/resources/Screenshot%202026-02-05%20080934.png)]
-   ### For window powershell 
-   ```bash
-winget install --id Git.Git -e --source winget
-sudo apt install git .
 
+ [![Logo](https://github.com/Kgsflink/Github-operation/blob/main/resources/Screenshot%202026-02-05%20080934.png)]
 
 3. Run installer with default options
-4. Verify installation:
+4. For winodw powershell
+```bash
+winget install --id Git.Git -e --source winget
+ ```
+5. For Linux setup
+```bash
+sudo apt install git -y
+ ```
+6. Verify Installation in terminal  
 ```bash
 git --version
 ```
+ [![Logo](https://github.com/Kgsflink/Github-operation/blob/main/resources/Screenshot%202026-02-05%20082927.png)]
+
 
 ### **2.2 Configure Git**
 ```bash
