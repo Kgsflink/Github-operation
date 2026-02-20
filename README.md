@@ -360,6 +360,10 @@ git push -u origin main
 
 ![git add , commit ](/resources/git_track_status.png )
 
+
+![git add , commit ](/resources/git_commit_m.png )
+
+
 ### **Step 6: Verify on GitHub**
 1. Refresh your GitHub repository page
 2. You should see all your files
