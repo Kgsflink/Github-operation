@@ -363,6 +363,16 @@ git push -u origin main
 
 ![git add , commit ](/resources/git_commit_m.png )
 
+### NOw git push operation 
+
+![git add , commit ](/resources/git_push.png )
+
+### Login credential 
+
+![git add , commit ](/resources/connect_github.png )
+
+
+![git add , commit ](/resources/git_push_final.png )
 
 ### **Step 6: Verify on GitHub**
 1. Refresh your GitHub repository page
