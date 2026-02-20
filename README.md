@@ -321,6 +321,8 @@ git init
 # Check status (files will be red = untracked)
 git status
 ```
+![git init](/resources/git_init.png "git init")
+
 
 ### **Step 3: Create Repository on GitHub**
 1. Go to https://github.com
@@ -340,6 +342,7 @@ git remote -v
 # origin  https://github.com/YOUR-USERNAME/my-project.git (fetch)
 # origin  https://github.com/YOUR-USERNAME/my-project.git (push)
 ```
+![git remote](/resources/git_remote.png )
 
 ### **Step 5: Add, Commit, and Push**
 ```bash
@@ -354,6 +357,8 @@ git commit -m "Initial commit: Added project files"
 git push -u origin main
 # After first time, just use: git push
 ```
+
+![git add , commit ](/resources/git_track_status.png )
 
 ### **Step 6: Verify on GitHub**
 1. Refresh your GitHub repository page
