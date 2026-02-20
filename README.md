@@ -508,6 +508,8 @@ Get-Service ssh-agent
 
 Status should be: **Running** ✅
 
+![ssh_status](/resources/service_status.png)
+
 ---
 
 ## 🚀 STEP 2: Add Your SSH Key
@@ -540,6 +542,8 @@ Now test with **GitHub**:
 ```powershell
 ssh -T git@github.com
 ```
+
+### Nhi Hoga lala 
 
 If everything is correct, you’ll see:
 
@@ -580,6 +584,8 @@ Run:
 ```bash
 ssh -T git@github.com
 ```
+
+![alt text](/resources/ssh_auth.png)
 
 If successful, you’ll see:
 
