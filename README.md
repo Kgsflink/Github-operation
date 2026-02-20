@@ -633,6 +633,8 @@ git push -u origin main
 
 It should push successfully without asking for password 🎉
 
+![alt text](/resources/git_remote_add.png)
+
 ---
 
 # 🔎 If You Get an Error
@@ -657,7 +659,7 @@ This will show detailed debug output to identify the problem.
 
 ---
 
-
+# Aaj ke liye itna hi 
 
 
 
