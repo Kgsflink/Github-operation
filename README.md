@@ -381,6 +381,211 @@ git push -u origin main
 
 ---
 
+
+---
+
+# 🔐NOW  SSH Method – Step by Step Guide
+
+### What do you think about this ?
+
+![What do you think about this?](/resources/ssh_page.png )
+
+---
+
+# 🧠 First Understand the Concept
+
+SSH authentication works using **two keys**:
+
+* **Private Key** 🔑 → Stays on your computer (keep it secret)
+* **Public Key** 🔓 → Added to your GitHub account
+
+When you connect:
+
+> GitHub checks whether your private key matches the public key stored in your account.
+
+If they match → Access granted ✅
+
+No password or PAT required every time.
+
+---
+
+# 🚀 STEP 1: Check If SSH Key Already Exists
+
+Run:
+
+```bash
+ls ~/.ssh
+```
+
+![ssh_info](/resources/ssh_info.png)
+
+
+```bash
+ssh
+```
+
+![ssh_info](/resources/ssh_info.png)
+
+
+
+If you see files like:
+
+* `id_rsa`
+* `id_ed25519`
+
+Then you already have SSH keys.
+
+If not → Generate a new one.
+
+---
+
+# 🚀 STEP 2: Generate a New SSH Key (Recommended: ed25519)
+
+Run:
+
+```bash
+ssh-keygen -t ed25519 -C "Apna.email.likh.na@gmail.com"
+```
+
+Press **Enter** through the prompts.
+Passphrase is optional.
+
+Your key will be saved in:
+
+```
+C:\Users\YourUsername\.ssh\
+```
+
+```bash
+ ssh-keygen -t ed25519 -C "kgop.....@gmail.com"      
+```
+
+![ssh_info](/resources/ssh_keygen.png)
+
+
+---
+
+# 🚀 STEP 3: Start the SSH Agent
+
+Start the agent:
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+Add your key:
+
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+---
+
+# 🚀 STEP 4: Copy Your Public Key
+
+Run:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Copy the entire output (it starts with `ssh-ed25519`).
+
+---
+
+# 🚀 STEP 5: Add SSH Key to GitHub
+
+1. Log in to your correct GitHub account (**Kgsflink**)
+2. Go to **Settings**
+3. Click **SSH and GPG Keys**
+4. Click **New SSH Key**
+5. Paste the copied public key
+6. Save
+
+---
+
+# 🚀 STEP 6: Test SSH Connection
+
+Run:
+
+```bash
+ssh -T git@github.com
+```
+
+If successful, you’ll see:
+
+```
+Hi Kgsflink! You've successfully authenticated...
+```
+
+---
+
+# 🚀 STEP 7: Change Remote URL to SSH (Important)
+
+Right now you're using HTTPS:
+
+```
+https://github.com/Kgsflink/Github-operation
+```
+
+Change it to SSH:
+
+```bash
+git remote set-url origin git@github.com:Kgsflink/Github-operation.git
+```
+
+Verify:
+
+```bash
+git remote -v
+```
+
+It should now show:
+
+```
+git@github.com:Kgsflink/Github-operation.git
+```
+
+---
+
+# 🚀 STEP 8: Push Your Code
+
+Now push:
+
+```bash
+git push -u origin main
+```
+
+It should push successfully without asking for password 🎉
+
+---
+
+# 🔎 If You Get an Error
+
+Run:
+
+```bash
+ssh -vT git@github.com
+```
+
+This will show detailed debug output to identify the problem.
+
+---
+
+# 🎯 Final Flow Summary
+
+1. Generate SSH key
+2. Add public key to GitHub
+3. Change remote to SSH
+4. Push
+
+
+---
+
+
+
+
+
 ## **PART 2: CONTRIBUTING TO OTHERS' PROJECTS (FORK → CLONE → PUSH)**
 
 ### **Scenario: Your friend/classmate has a project and you want to add features**
