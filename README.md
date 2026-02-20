@@ -479,6 +479,75 @@ Add your key:
 ssh-add ~/.ssh/id_ed25519
 ```
 
+
+
+# 🔧 FIX SSH AGENT ON WINDOWS (PowerShell Method)
+
+---
+
+## 🚀 STEP 1: Enable SSH Agent Service
+
+In PowerShell (Run as Administrator):
+
+```powershell
+Get-Service ssh-agent
+```
+
+If it shows **Stopped** and **Disabled**, enable it:
+
+```powershell
+Set-Service -Name ssh-agent -StartupType Automatic
+Start-Service ssh-agent
+```
+
+Now check again:
+
+```powershell
+Get-Service ssh-agent
+```
+
+Status should be: **Running** ✅
+
+---
+
+## 🚀 STEP 2: Add Your SSH Key
+
+Now run:
+
+```powershell
+ssh-add C:\Users\KARTIK BIND\.ssh\id_ed25519
+```
+
+⚠ IMPORTANT: Because your username has space (`KARTIK BIND`), use quotes:
+
+```powershell
+ssh-add "C:\Users\KARTIK BIND\.ssh\id_ed25519"
+```
+
+If successful, it will say:
+
+```
+Identity added
+```
+![ssh_info](/resources/ssh_powershell.png)
+
+---
+
+## 🚀 STEP 3: Test SSH Connection
+
+Now test with **GitHub**:
+
+```powershell
+ssh -T git@github.com
+```
+
+If everything is correct, you’ll see:
+
+```
+Hi Kgsflink! You've successfully authenticated...
+```
+
+
 ---
 
 # 🚀 STEP 4: Copy Your Public Key
