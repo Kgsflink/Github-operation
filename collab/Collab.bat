@@ -52,19 +52,19 @@ if "%character_name%"=="" (
     goto add_record
 )
 
-:: Get current date and time
+
 for /f "tokens=2 delims==" %%I in ('wmic os get localdatetime /value') do set datetime=%%I
 set date=%datetime:~0,4%-%datetime:~4,2%-%datetime:~6,2%
 set time=%datetime:~8,2%:%datetime:~10,2%:%datetime:~12,2%
 
-:: Add record to bachelors.md
-echo. >> bachelors.md
-echo --- >> bachelors.md
-echo **Record Added:** %date% %time% >> bachelors.md
-echo **Student Name:** %student_name% >> bachelors.md
-echo **Character Name:** %character_name% >> bachelors.md
-echo **Status:** Active Bachelor >> bachelors.md
-echo --- >> bachelors.md
+
+echo. >> README.md.md
+echo --- >> README.md.md
+echo **Record Added:** %date% %time% >> README.md.md
+echo **Student Name:** %student_name% >> README.md.md
+echo **Character Name:** %character_name% >> README.md.md
+echo **Status:** Active Bachelor >> README.md.md
+echo --- >> README.md.md
 
 echo.
 echo ================================================
@@ -80,18 +80,18 @@ echo            ALL STUDENT RECORDS
 echo ================================================
 echo.
 
-if not exist bachelors.md (
+if not exist README.md.md (
     echo No records found! Please add some records first.
     echo.
     pause
     goto main
 )
 
-type bachelors.md
+type README.md.md
 echo.
 echo ================================================
 echo Total Records: 
-find /c "**Student Name:**" bachelors.md
+find /c "**Student Name:**" README.md.md
 echo ================================================
 pause
 goto main
@@ -103,7 +103,7 @@ echo            SEARCH STUDENT RECORD
 echo ================================================
 echo.
 
-if not exist bachelors.md (
+if not exist README.md.md (
     echo No records found! Please add some records first.
     echo.
     pause
@@ -124,7 +124,7 @@ echo ================================================
 echo.
 
 set found=0
-for /f "tokens=*" %%a in ('findstr /i "%search%" bachelors.md') do (
+for /f "tokens=*" %%a in ('findstr /i "%search%" README.md.md') do (
     set line=%%a
     echo !line!
     set found=1
@@ -150,8 +150,8 @@ echo.
 set /p confirm="Are you sure? (Y/N): "
 
 if /i "%confirm%"=="Y" (
-    if exist bachelors.md (
-        del bachelors.md
+    if exist README.md.md (
+        del README.md.md
         echo All records have been deleted.
     ) else (
         echo No records to delete.
