@@ -5,7 +5,7 @@ setlocal enabledelayedexpansion
 title Student Bachelor Records System
 color 0A
 
-:: Main menu
+
 :main
 cls
 echo ================================================
