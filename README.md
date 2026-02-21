@@ -2,7 +2,7 @@
 
 ---
 
-## 1️⃣ Introduction to Version Control System (VCS)
+## 1️⃣ Introduction to Version Control System (VCS) ..
 
 ### What is Version Control?
 
